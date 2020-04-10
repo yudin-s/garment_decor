@@ -1,0 +1,86 @@
+.page {
+    overflow: hidden;
+    padding-top: $header-height;
+    background: #f7f7f7;
+
+    @media ($phone) {
+        padding-top: $header-height-1;
+    }
+
+    &__title {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: 30px;
+        text-transform: uppercase;
+
+        &.mod-cap {
+            text-transform: capitalize;
+        }
+
+        .breadcrumbs + & {
+            margin-top: 0;
+        }
+
+        @media ($tablet) {
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+
+        @media ($phone) {
+            font-size: 20px;
+        }
+
+        i {
+            position: relative;
+            top: 5px;
+            display: inline-block;
+            vertical-align: top;
+            size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 27px;
+            text-align: center;
+            color: white;
+            background: $main-color;
+            border-radius: 50%;
+
+            @media ($tablet) {
+                top: 2px;
+            }
+
+            @media ($phone) {
+                top: -2px;
+            }
+        }
+    }
+
+    &-card {
+        margin-bottom: 25px;
+        padding: 65px 40px;
+        background: white;
+
+        @media ($phone) {
+            margin: 0 -10px 20px;
+            padding: 40px 20px;
+        }
+
+        .form-block {
+
+            &__row {
+
+                .field {
+                    width: calc((100% - 120px) / 2);
+
+                    @media ($phone) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        & + button {
+            margin-top: 50px;
+        }
+    }
+}

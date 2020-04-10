@@ -1,0 +1,43 @@
+.chat-btn {
+    cursor: pointer;
+    position: fixed * 50px 50px *;
+    z-index: 1;
+    size: 102px;
+    text-align: center;
+    color: white;
+    background: $main-color;
+    border-radius: 50%;
+    box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.45);
+
+    @media ($small-desktop) {
+        bottom: 25px;
+        right: 30px;
+        size: 80px;
+    }
+
+    @media ($phone) {
+        bottom: 20px;
+        right: 25px;
+        size: 50px;
+    }
+
+    .chat-icon {
+        position: relative;
+        top: 50%;
+        display: inline-block;
+        size: 50px;
+        transform: translate(0, -50%);
+
+        @media ($small-desktop) {
+            size: 40px;
+        }
+
+        @media ($phone) {
+            size: 30px;
+        }
+    }
+
+    &:hover {
+        background: #e46d00;
+    }
+}

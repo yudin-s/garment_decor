@@ -1,0 +1,103 @@
+.about-us {
+    padding: 20px 0 70px;
+    background: white;
+
+    @media ($phone) {
+        padding-bottom: 30px;
+    }
+
+    &__item {
+        @extend .clearfix;
+
+        margin-top: 55px;
+        padding-left: calc(602 * 100 / 1180)%;
+
+        @media ($phone) {
+            width: 236px;
+            margin: 0 auto 20px;
+            padding: 0;
+        }
+
+        &.mod-reverse {
+            padding: 0 calc(600 * 100 / 1180)% 0 calc(200 * 100 / 1180)%;
+
+            @media ($phone) {
+                padding: 0;
+            }
+
+            .about-image {
+                float: right;
+                width: calc(509 * 100 / 380)%;
+                margin-right: calc(-520 * 100 / 380)%;
+                margin-left: 0;
+
+                @media ($phone) {
+                    float: none;
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+
+            .about-dscr {
+                width: calc(380 * 100 / 380)%;
+                padding-top: calc(100 * 100 / 380)%;
+
+                @media ($phone) {
+                    width: auto;
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+
+    .about-image {
+        float: left;
+        width: calc(509 * 100 / 578)%;
+        margin-left: calc(-530 * 100 / 578)%;
+
+        @media ($phone) {
+            float: none;
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .about-dscr {
+        width: calc(380 * 100 / 578)%;
+        padding-top: calc(100 * 100 / 578)%;
+
+        @media ($phone) {
+            width: auto;
+            padding-top: 20px;
+            text-align: center;
+        }
+    }
+
+    .about-title {
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 30px;
+
+        @media ($tablet) {
+            margin-bottom: 28px;
+            font-size: 28px;
+        }
+
+        @media ($phone) {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+    }
+
+    .about-text {
+        font-size: 22px;
+
+        @media ($tablet) {
+            font-size: 18px;
+        }
+
+        @media ($phone) {
+            font-size: 16px;
+        }
+    }
+}

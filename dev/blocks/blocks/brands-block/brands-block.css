@@ -1,0 +1,25 @@
+.brands-block {
+    padding: 0 0 40px;
+    background: #f1f1f2;
+
+    @media ($phone) {
+        padding-top: 40px;
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    &__inner {
+        text-align: center;
+
+        &.mod-services {
+            margin-bottom: 80px;
+
+            @media (max-width: 979px) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+$nav-height: 52px;
+
+.nav {
+    height: $nav-height;
+    background: #fafafa;
+
+    @media ($phone) {
+        height: auto;
+    }
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        width: calc((100% / 4) - 3px);
+        text-align: center;
+        border-left: 1px solid #d8d7d7;
+
+        &:first-child {
+            border-left: 0 none;
+        }
+
+        @media ($phone) {
+            display: block;
+            width: calc(100% + 20px);
+            margin: 0 -10px;
+            padding: 0 10px;
+            border-left: 0 none;
+            border-bottom: 1px solid #d8d7d7;
+        }
+    }
+
+    &-icon {
+        display: inline-block;
+        vertical-align: middle;
+        size: 31px;
+        margin-right: 40px;
+
+        @media ($tablet) {
+            margin-right: 10px;
+        }
+        @media ($phone) {
+            size: 22px;
+            margin-rigth: 25px;
+        }
+    }
+
+    .link {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 18px;
+        line-height: $nav-height;
+
+        @media ($tablet) {
+            font-size: 16px;
+        }
+
+        @media ($phone) {
+            font-size: 12px;
+            line-height: 56px;
+        }
+    }
+}

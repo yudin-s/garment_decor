@@ -1,0 +1,65 @@
+.quote-block {
+    padding: 25px 0 94px;
+    background: #f7f7f7;
+
+    @media ($phone) {
+        padding: 20px 0 20px;
+    }
+
+    .quote {
+        margin: 50px 0;
+
+        @media ($phone) {
+            margin: 33px 0;
+        }
+
+        &-text {
+            position: relative;
+            width: 530px;
+            margin: 0 auto;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 1.6;
+            text-align: center;
+
+            @media ($phone) {
+                width: 280px;
+                font-size: 16px;
+            }
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                size: 22px 18px;
+                background: url('../i/quote.png') no-repeat;
+                background-size: contain;
+
+                @media ($phone) {
+                    size: 14px 12px;
+                }
+            }
+
+            &:before {
+                left: -34px;
+
+                @media ($phone) {
+                    top: -20px;
+                    left: 0;
+                }
+            }
+
+            &:after {
+                right: -16px;
+                bottom: 20px;
+                transform: scale(-1, -1);
+                transform-origin: bottom;
+
+                @media ($phone) {
+                    right: 0;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}

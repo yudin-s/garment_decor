@@ -1,0 +1,5 @@
+$desktop: (max-width: 1399px);
+$small-desktop: (max-width: 1199px);
+$tablet: (max-width: 1023px);
+$phone: (max-width: 767px);
+$small-phone: (max-width: 480px);

@@ -1,0 +1,42 @@
+.contacts
+    .contacts__details
+        .contacts__map
+            #map
+        .base-title
+            p Contact
+        .base-text
+            p We are always open for your questions and suggestions. Just fill out the form or contact us in any convenient way.
+        .contact-info
+            .contact-info__item
+                p.title Headquarters
+                p 14762 Central Ave, Chino CA 91710
+            .contact-info__item
+                p.title Queries
+                p
+                    a(href="mailto:info@garmentdecor.com") info@garmentdecor.com
+            .contact-info__item
+                p.title Call Us
+                p
+                    a(href="tel:8559427636") (855) 942 - 7636            
+    .contacts__form
+        .contacts__title Fill the Form
+        form.form-block       
+            .form-block__row
+                .field
+                    label(for="") Name #[sup *]
+                    input(type="text")
+                .field
+                    label(for="") Email address #[sup *]
+                    input(type="text")
+                .field
+                    label(for="") Subject
+                    input(type="text")
+            .form-block__row  
+                .field.mod-message
+                    label(for="") Message #[sup *]
+                    textarea
+            button(type="submit").base-link
+                span Send
+                svg
+                    use(xmlns:xlink="http://www.w3.org/1999/xlink",xlink:href="#link")
+        

@@ -1,0 +1,33 @@
+.breadcrumbs {
+    margin: 28px 0 16px;
+
+    &__item {
+        display: inline-block;
+        margin-right: 3px;
+
+        @media ($phone) {
+            font-size: 12px;
+        }
+
+        .link {
+            color: #7d7b7b;
+
+            &:after {
+                content: '>';
+                position: relative;
+                top: 1px;
+                margin-left: 4px;
+                font-size: 14px;
+                color: #7d7b7b;
+
+                @media ($phone) {
+                    font-size: 12px;
+                }
+            }
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}

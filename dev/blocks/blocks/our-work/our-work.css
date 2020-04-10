@@ -1,0 +1,130 @@
+.our-work {
+    padding: 96px 0;
+    background: #fff;
+
+    @media ($small-desktop) {
+        padding: 60px 0;
+    }
+
+    @media ($tablet) {
+        padding: 40px 0;
+    }
+
+    @media ($phone) {
+        padding: 0;
+    }
+}
+
+.printing-gallary {
+    margin: 40px 0;
+
+    @media ($phone) {
+        margin: 0;
+    }
+
+    .work-gallery__title {
+        width: 70%;
+        padding: 0;
+        font-size: 24px;
+    }
+}
+
+.work-gallery {
+    @extend .clearfix;
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        float: left;
+        width: calc(100% / 4);
+        padding-top: calc(100% / 4);
+
+        @media ($phone) {
+            float: none;
+            width: 100%;
+            padding-top: 176px;
+            margin: 0 auto;
+        }
+
+        &.mod-work {
+            z-index: 1;
+            transform: scale(1);
+            transition: transform .2s ease-in-out;
+
+            @media ($phone) {
+                float: left;
+                width: 50%;
+                padding-top: 50%;
+            }
+
+            @media ($small-phone) {
+                float: none;
+                width: 200px;
+                padding-top: 200px;
+            }
+
+            &:hover {
+                z-index: 2;
+                box-shadow: 0 7px 27px rgba(0, 0, 0, 0.53);
+                transform: scale(1.1);
+                transition: transform .2s ease-in-out;
+            }
+
+            img {
+                position: absolute 0 0 * *;
+                size: 100%;
+            }
+        }
+
+        &.mod-link {
+            @media ($phone) {
+                padding-top: 78px;
+            }
+        }
+    }
+
+    &__title {
+        position: absolute 50% * * 50%;
+        padding: 0 20px;
+        font-size: 48px;
+        line-height: 1.1;
+        text-transform: uppercase;
+        transform: translate(-50%, -50%);
+
+        @media ($tablet) {
+            font-size: 38px;
+            line-height: 1;
+        }
+
+        @media ($phone) {
+            margin-left: -30px;
+            font-size: 32px;
+        }
+
+        span {
+            position: relative;
+        }
+
+        &:before {
+            content: '';
+            position: absolute * * -9px -45px;
+            size: 302px 71px;
+            background: url('../i/title-bg.png') no-repeat;
+            background-size: contain;
+
+            @media ($tablet) {
+                bottom: 0;
+                size: 280px 60px;
+            }
+
+            @media ($phone) {
+                bottom: -14px;
+            }
+        }
+    }
+
+    .base-link {
+        position: absolute 50% * * 50%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,334 @@
+.gallery {
+    @extend .clearfix;
+
+    margin-left: -5px;
+    padding-bottom: 85px;
+
+    @media ($phone) {
+        margin-left: 0;
+        padding-bottom: 60px;
+    }
+
+    @media (max-width: 749px) {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    @media ($small-phone) {
+        padding-bottom: 20px;
+    }
+
+    &.mod-team {
+        margin: 40px 0;
+        padding-bottom: 0;
+
+        @media (max-width: 749px) {
+            margin: 30px auto;
+        }
+
+        & .gallery__item {
+            margin-top: 0 !important;
+
+            @media (max-width: 749px) {
+                margin-bottom: 5px;
+            }
+
+            .gallery-title {
+                font-weight: 700;
+                font-size: 18px;
+                text-transform: none;
+
+                @media (min-width: 768px) and (max-width: 1023px) {
+                    font-size: 16px;
+                }
+                @media ($small-phone) {
+                    font-size: 16px;
+                }
+
+                &:before {
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        bottom: -10px;
+                    }
+                    @media ($small-phone) {
+                        bottom: -10px;
+                    }
+                }
+
+                i {
+                    display: block;
+                    font-weight: 300;
+                    font-style: normal;
+                    font-size: 14px;
+
+                    @media (min-width: 768px) and (max-width: 1023px) {
+                        font-size: 12px;
+                    }
+                    @media ($small-phone) {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.mod-guide {
+
+        & .gallery__item {
+            margin-top: 0 !important;
+
+            @media (max-width: 749px) {
+                padding-top: calc(268 * 100 / 420)% !important;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    & img {
+        position: absolute 0 * * 0;
+        size: 100%;
+        object-fit: cover;
+    }
+
+    &-title {
+        position: absolute * * 40px 78px;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: white;
+
+        @media ($tablet) {
+            bottom: 20px;
+            left: 50px;
+            font-size: 20px;
+        }
+
+        @media ($phone) {
+            bottom: 40px;
+            left: 78px;
+            font-size: 24px;
+        }
+
+        @media ($small-phone) {
+            font-size: 16px;
+            bottom: 36px;
+            left: 56px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute * * -20px -64px;
+            size: 302px 71px;
+            background: url('../i/title-bg.png') no-repeat;
+            background-size: contain;
+
+            @media ($tablet) {
+                bottom: -13px;
+                left: -39px;
+                size: 200px 47px;
+            }
+
+            @media ($phone) {
+                bottom: -25px;
+                left: -64px;
+                size: 302px 71px;
+            }
+
+            @media ($small-phone) {
+                bottom: -16px;
+                left: -49px;
+                size: 200px 47px;
+            }
+        }
+
+        span {
+            position: relative;
+        }
+    }
+
+    &__item {
+        position: relative;
+        float: left;
+        margin-bottom: 5px;
+        margin-left: calc(5 * 100 / 1185)%;
+        background-size: cover;
+        transform: scale(1);
+        transition: transform .2s ease-in-out;
+
+        @media (min-width: 1025px) {
+            &:hover {
+                z-index: 2;
+                box-shadow: 0 7px 27px rgba(0, 0, 0, 0.53);
+                transform: scale(1.03);
+                transition: transform .2s ease-in-out;
+            }
+        }
+
+        @media ($phone) {
+            width: calc(50% - 15px) !important;
+            padding-top: calc(50% - 10px) !important;
+            margin-bottom: 20px;
+            margin-left: 20px;
+
+
+            &:nth-child(2n + 1) {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 749px) {
+            width: 100% !important;
+            margin-left: 0;
+            padding-top: 100% !important;
+        }
+
+        a {
+            position: absolute 0;
+        }
+
+        &.mod-square {
+            width: calc(335 * 100 / 1185)%;
+            padding-top: calc(335 * 100 / 1185)%;
+        }
+        &.mod-mid-square {
+            width: calc((100% - 15px) / 3);
+            padding-top: calc((100% - 10px) / 3);
+        }
+        &.mod-hor {
+            width: calc(500 * 100 / 1185)%;
+            padding-top: calc(335 * 100 / 1185)%;
+        }
+        &.mod-mid-hor {
+            width: calc(587.5 * 100 / 1185)%;
+            padding-top: calc(335 * 100 / 1185)% !important;
+        }
+        &.mod-vert {
+            width: calc(335 * 100 / 1185)%;
+            padding-top: calc(500 * 100 / 1185)%;
+        }
+        &.mod-big-square {
+            width: calc(500 * 100 / 1185)%;
+            padding-top: calc(500 * 100 / 1185)%;
+        }
+        &.mod-big-hor {
+            width: calc(675 * 100 / 1185)%;
+            padding-top: calc(335 * 100 / 1185)%;
+        }
+        &:nth-child(7),
+        &:nth-child(8) {
+            margin-top: calc(-165 * 100 / 1185)%;
+
+            @media ($phone) {
+                margin-top: 0;
+            }
+        }
+
+        &.t-shirt {
+            background-image: url(../i/category/t-shirt.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/t-shirt-1.png);
+            }
+        }
+        &.polo {
+            background-image: url(../i/category/polo.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/polo-1.png);
+            }
+        }
+        &.tank {
+            background-image: url(../i/category/tank.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/tank-1.png);
+            }
+        }
+        &.tee {
+            background-image: url(../i/category/tee.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/tee-1.png);
+            }
+        }
+        &.sleeve {
+            background-image: url(../i/category/sleeve.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/sleeve-1.png);
+            }
+        }
+        &.shorts {
+            background-image: url(../i/category/shorts.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/shorts-1.png);
+            }
+        }
+        &.activewear {
+            background-image: url(../i/category/activewear.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/activewear-1.png);
+            }
+        }
+        &.outerwear {
+            background-image: url(../i/category/outerwear.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/outerwear-1.png);
+            }
+        }
+        &.hoodies {
+            background-image: url(../i/category/hoodies.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/hoodies-1.png);
+            }
+        }
+        &.bags {
+            background-image: url(../i/category/bags.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/bags-1.png);
+            }
+        }
+        &.hats {
+            background-image: url(../i/category/hats.png);
+
+            @media ($phone) {
+                background-image: url(../i/category/hats-1.png);
+            }
+        }
+        &.staff-tshirt {
+            background-image: url(../i/category/staff-t-shirt.jpg);
+        }
+        &.company-polos {
+            background-image: url(../i/category/company-polos.jpg);
+        }
+        &.woven-buttons {
+            background-image: url(../i/category/woven-buttons.jpg);
+        }
+        &.backpacks-bags {
+            background-image: url(../i/category/backpacks.jpg);
+        }
+        &.baseball {
+            background-image: url(../i/category/baseball.jpg);
+        }
+        &.basketball {
+            background-image: url(../i/category/basketball.jpg);
+        }
+        &.soccer {
+            background-image: url(../i/category/soccer.jpg);
+        }
+        &.football {
+            background-image: url(../i/category/football.jpg);
+        }
+        &.volleyball {
+            background-image: url(../i/category/volleyball.jpg);
+        }
+        &.golf {
+            background-image: url(../i/category/golf.jpg);
+        }
+    }
+}

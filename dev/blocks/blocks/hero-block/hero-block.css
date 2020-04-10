@@ -1,0 +1,158 @@
+$hero-height: 543px;
+$hero-height-1: 400px;
+$hero-height-2: 360px;
+
+.hero-block {
+    background-color: #222;
+    background-image: url('../i/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
+
+    @media ($small-desktop) {
+        height: calc($hero-height-1 + 4px);
+    }
+
+    @media ($tablet) {
+        height: calc($hero-height-2 + 4px);
+    }
+
+    @media ($phone) {
+        height: auto;
+        background-image: radial-gradient(circle 299px at 51% 8%, rgba(127, 106, 102, 0.11) 0%, rgba(22, 19, 19, 0.11) 100%);
+        background-image: url('../i/hero-bg-1.png');
+        background-size: 300px auto;
+        background-position: 50% 100%;
+    }
+
+    &__dscr {
+        size: 590px $hero-height;
+        padding: 142px 0 0 0;
+        color: white;
+
+        @media ($small-desktop) {
+            size: 500px $hero-height-1;
+            padding: 100px 0 0 70px;
+        }
+
+        @media ($tablet) {
+            size: 400px $hero-height-2;
+            padding: 100px 0 0 50px;
+        }
+
+        @media ($phone) {
+            size: auto;
+            padding: 33px 20px 240px;
+        }
+
+        .base-text {
+            p {
+                margin-bottom: 25px;
+            }
+
+            @media ($small-desktop) {
+                font-size: 15px;
+
+                p {
+                    margin-bottom: 15px;
+                }
+            }
+
+            @media ($tablet) {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__caption {
+        position: absolute * * 44px calc(50% + 80px);
+        color: white;
+
+        @media ($small-desktop) {
+            bottom: 30px;
+        }
+
+        @media ($phone) {
+            bottom: 30px;
+            left: calc(50% - 20px);
+        }
+
+        p {
+            position: relative;
+            font-style: italic;
+
+            @media ($phone) {
+                font-size: 11px;
+            }
+
+            span {
+                display: block;
+                font-weight: 700;
+                font-size: 18px;
+
+                @media ($phone) {
+                    font-size: 13px;
+                }
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute * * -27px -71px;
+            size: 362px 84px;
+            background: url('../i/title-bg.png') no-repeat;
+            background-size: contain;
+
+            @media ($phone) {
+                bottom: -14px;
+                left: -50px;
+                size: 240px 56px;
+            }
+        }
+    }
+
+    &__title {
+        position: relative;
+        margin-bottom: 33px;
+        font-weight: 700;
+        font-size: 30px;
+        text-transform: uppercase;
+
+        @media ($small-desktop) {
+            font-size: 26px;
+        }
+
+        @media ($tablet) {
+            margin-bottom: 40px;
+            font-size: 24px;
+        }
+
+        @media ($phone) {
+            margin-bottom: 28px;
+            font-size: 16px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute * * -17px -9px;
+            size: 302px 71px;
+            background: url('../i/title-bg.png') no-repeat;
+            background-size: contain;
+
+            @media ($small-desktop) {
+                bottom: -20px;
+                left: -20px;
+            }
+
+            @media ($phone) {
+                top: -14px;
+                bottom: auto;
+                size: 200px 47px;
+            }
+        }
+
+        p {
+            position: relative;
+        }
+    }
+}

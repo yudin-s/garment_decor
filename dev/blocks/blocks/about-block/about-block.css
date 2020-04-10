@@ -1,0 +1,61 @@
+.about-block {
+    background: #fff;
+
+    &__inner {
+        @extend .clearfix;
+
+        padding: 60px 20px 44px 530px;
+
+        @media ($tablet) {
+            padding-left: 330px;
+        }
+
+        @media ($phone) {
+            padding: 30px 0;
+        }
+    }
+
+    &__img {
+        float: left;
+        width: 552px;
+        margin-left: -574px;
+
+        @media ($desktop) {
+            width: 500px;
+            margin-left: -530px;
+        }
+
+        @media ($tablet) {
+            width: 300px;
+            margin-left: -330px;
+        }
+
+        @media ($phone) {
+            float: none;
+            width: 300px;
+            margin: auto 0;
+        }
+    }
+
+    &__dscr {
+        padding-top: 66px;
+
+        @media ($small-desktop) {
+            padding-top: 40px;
+        }
+    }
+
+    .base-title {
+        &:before {
+            display: none;
+        }
+    }
+
+    .base-link {
+        margin-top: 25px;
+
+        @media ($phone) {
+            margin-top: 10px;
+        }
+    }
+}

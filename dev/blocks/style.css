@@ -1,0 +1,57 @@
+/*base*/
+
+@import 'base/reset/reset.css';
+@import 'base/grid/grid.css';
+
+/*cosmetic*/
+
+@import 'cosmetic/media/media.css';
+@import 'cosmetic/fonts/fonts.css';
+@import 'cosmetic/colorscheme/colorscheme.css';
+
+/*elements*/
+
+@import 'elements/burger/burger.css';
+@import 'elements/button/button.css';
+@import 'elements/input/input.css';
+@import 'elements/link/link.css';
+@import 'elements/base-title/base-title.css';
+@import 'elements/base-text/base-text.css';
+@import 'elements/info/info.css';
+
+/*blocks*/
+
+@import 'blocks/body/body.css';
+@import 'blocks/header/header.css';
+@import 'blocks/header/dropdown.css';
+@import 'blocks/footer/footer.css';
+@import 'blocks/page/page.css';
+@import 'blocks/breadcrumbs/breadcrumbs.css';
+@import 'blocks/filter/filter.css';
+@import 'blocks/pagination/pagination.css';
+@import 'blocks/slider/slider.css';
+@import 'blocks/nav/nav.css';
+@import 'blocks/about-block/about-block.css';
+@import 'blocks/product-block/product-block.css';
+@import 'blocks/brands-block/brands-block.css';
+@import 'blocks/our-work/our-work.css';
+@import 'blocks/feedback-block/feedback-block.css';
+@import 'blocks/products/products.css';
+@import 'blocks/chat/chat.css';
+@import 'blocks/hero-block/hero-block.css';
+@import 'blocks/quote-block/quote-block.css';
+@import 'blocks/about-us/about-us.css';
+@import 'blocks/gallary/gallary.css';
+@import 'blocks/tabs-block/tabs-block.css';
+@import 'blocks/accordeon/accordeon.css';
+@import 'blocks/product/product.css';
+@import 'blocks/team-bnnr/team-bnnr.css';
+@import 'blocks/steps-block/steps-block.css';
+@import 'blocks/video-wr/video-wr.css';
+@import 'blocks/faq/faq.css';
+@import 'blocks/services/services.css';
+@import 'blocks/contacts/contacts.css';
+@import 'blocks/form/form.css';
+@import 'blocks/popup/popup.css';
+@import 'blocks/order/order.css';
+@import 'blocks/checkout/checkout.css';

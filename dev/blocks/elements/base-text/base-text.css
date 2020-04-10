@@ -1,0 +1,26 @@
+.base-text {
+    font-size: 18px;
+    line-height: 1.4;
+
+    @media ($tablet) {
+        font-size: 16px;
+    }
+
+    @media ($phone) {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+}
+
+
+.comment-text {
+    color: #7d7b7b;
+
+    p {
+        margin-bottom: 10px;
+    }
+}

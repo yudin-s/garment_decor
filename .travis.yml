@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "8"
+cache:
+  directories:
+    - "node_modules"
+branches:
+  only:
+  - master
+install:
+  - npm install
+before_script:
+  - npm install -g gulp-cli
+script:
+  - gulp template
+  - echo "Skipping tests"
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  target-branch: gh-pages
+  local-dir: project
+  on:
+    branch: master

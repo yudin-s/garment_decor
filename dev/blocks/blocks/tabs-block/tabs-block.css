@@ -1,0 +1,122 @@
+.tabs-block {
+    margin-top: 40px;
+    padding-bottom: 120px;
+
+    @media ($phone) {
+        padding-bottom: 40px;
+    }
+
+    &__nav {
+        padding: 40px 0;
+        text-align: center;
+
+        @media ($phone) {
+            margin: 0 -10px;
+            padding: 0 10px;
+            background: white;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        position: relative;
+        display: inline-block;
+        margin: 0 100px;
+        font-weight: 700;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #7d7b7b;
+
+        @media ($small-desktop) {
+            margin: 0 80px;
+            font-size: 16px;
+        }
+
+        @media ($tablet) {
+            margin: 0 50px;
+        }
+
+        @media ($phone) {
+            margin: 0 -5px 0 0;
+            padding: 0 12px;
+            font-size: 10px;
+            line-height: 45px;
+            border-left: 1px solid #f7f7f7;
+
+            &:first-child {
+                border: 0 none;
+            }
+        }
+
+        span {
+            position: relative;
+        }
+
+        &.is-active {
+            color: white;
+
+            @media ($phone) {
+                color: black;
+            }
+
+            &:before {
+                content: '';
+                position: absolute * * -41px calc(50% - 200px);
+                size: 442px 90px;
+                background: url('../i/tabs-bg.png') no-repeat;
+                background-size: contain;
+
+                @media ($small-desktop) {
+                    position: absolute * * -32px calc(50% - 153px);
+                    size: 370px 75px;
+                }
+
+                @media ($tablet) {
+                    position: absolute * * -25px calc(50% - 135px);
+                    size: 320px 65px;
+                }
+
+                @media ($phone) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__content {
+        margin: 60px 0;
+
+        @media ($phone) {
+            margin: 20px 0;
+        }
+
+        .tabs-content {
+            display: none;
+        }
+
+        .work-gallery {
+
+            &__item {
+
+                &:first-child {
+
+                    @media ($phone) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .work-gallery__title {
+            left: 0;
+            padding: 0 50px;
+            font-size: 24px;
+            transform: translate(0, -50%);
+
+            &:before {
+                position: absolute * * -34px 10px;
+                size: 284px 68px;
+            }
+        }
+    }
+}

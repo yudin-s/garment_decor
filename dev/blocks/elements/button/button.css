@@ -1,0 +1,17 @@
+button {
+    cursor: pointer;
+    display: inline-block;
+    font: 300 14px/1.2 $nexa;
+    padding: 0;
+    border: 0 none;
+    background: none;
+    box-shadow: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    display: block;
+}

@@ -1,0 +1,16 @@
+.video-wr {
+    position: relative;
+    width: 100%;
+    margin-bottom: 95px;
+    padding-top: calc(668 * 100 / 1180)%;
+
+    @media ($phone) {
+        width: calc(100% + 20px);
+        margin: 0 -10px 30px;
+    }
+
+    iframe {
+        position: absolute 0;
+        size: 100%;
+    }
+}

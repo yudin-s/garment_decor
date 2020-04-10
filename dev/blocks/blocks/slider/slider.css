@@ -1,0 +1,168 @@
+$slider-height: 600px;
+$slider-height-1: 400px;
+$slider-height-2: 360px;
+
+.slider {
+    height: calc($slider-height + 4px);
+    background: #14110f;
+    border-bottom: 4px solid $main-color;
+
+    @media ($small-desktop) {
+        height: calc($slider-height-1 + 4px);
+    }
+
+    @media ($tablet) {
+        height: calc($slider-height-2 + 4px);
+    }
+
+    @media ($phone) {
+        height: auto;
+        background-color: #1e1b1a;
+        background-image: radial-gradient(circle 383px at 55% 45%, rgba(127, 106, 102, 0.11) 0%, rgba(22, 19, 19, 0.11) 100%);
+    }
+
+    &__item {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+
+        &.mod-slide-1 {
+            background-image: url('../i/slider/slider-1.jpg');
+
+            @media ($phone) {
+                background: none;
+            }
+        }
+        &.mod-slide-2 {
+            background-image: url('../i/slider/slider-2.jpg');
+
+            @media ($phone) {
+                background: none;
+            }
+        }
+        &.mod-slide-3 {
+            background-image: url('../i/slider/slider-3.jpg');
+
+            @media ($phone) {
+                background: none;
+            }
+        }
+    }
+
+    &__dscr {
+        size: 510px $slider-height;
+        padding: 172px 0 0 70px;
+        color: white;
+
+        @media ($small-desktop) {
+            size: 440px $slider-height-1;
+            padding: 100px 0 0 70px;
+        }
+
+        @media ($tablet) {
+            size: 380px $slider-height-2;
+            padding: 100px 0 0 50px;
+        }
+
+        @media ($phone) {
+            size: auto;
+            padding: 80px 30px 100px;
+        }
+    }
+
+    &-title {
+        position: relative;
+        margin-bottom: 33px;
+        font-weight: 700;
+        font-size: 48px;
+        text-transform: uppercase;
+
+        @media ($small-desktop) {
+            font-size: 38px;
+        }
+
+        @media ($tablet) {
+            font-size: 36px;
+        }
+
+        @media ($phone) {
+            margin-bottom: 28px;
+            font-size: 32px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute * * -1px -40px;
+            size: 302px 71px;
+            background: url('../i/title-bg.png') no-repeat;
+            background-size: contain;
+
+            @media ($small-desktop) {
+                bottom: -10px;
+            }
+
+            @media ($phone) {
+                top: 0;
+                bottom: auto;
+                size: 200px 47px;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute * * -13px 0;
+            size: 65px 1px;
+            background: #f87601;
+            background: linear-gradient(to right, #f87601 0%, #000000 100%);
+        }
+
+        p {
+            position: relative;
+        }
+    }
+
+    &-text {
+        margin-bottom: 45px;
+        font-size: 24px;
+
+        @media ($small-desktop) {
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+
+        @media ($tablet) {
+            font-size: 18px;
+        }
+
+        @media ($phone) {
+            font-size: 16px;
+        }
+    }
+
+    .owl {
+
+        &-dots {
+            position: absolute * 0 34px 0;
+            text-align: center;
+
+            @media ($phone) {
+                bottom: 32px;
+            }
+        }
+        &-dot {
+            display: inline-block;
+            vertical-align: middle;
+            size: 6px;
+            margin: 0 3px;
+            border: 1px solid white;
+            border-radius: 50%;
+            transition: all .1s ease-in-out;
+
+            &.active,
+            &:hover {
+                background: $main-color;
+                border-color: $main-color;
+            }
+        }
+    }
+}

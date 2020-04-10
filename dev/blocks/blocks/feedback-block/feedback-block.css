@@ -1,0 +1,211 @@
+.feedback-block {
+    padding: 90px 0 170px;
+    text-align: center;
+    background: #f1f1f2;
+
+    @media ($phone) {
+        padding: 50px 0 80px;
+    }
+
+    .base-title {
+        display: inline-block;
+        margin-bottom: 34px;
+
+        &:before {
+            bottom: -14px;
+            left: -26px;
+
+            @media ($phone) {
+                bottom: -8px;
+            }
+        }
+
+        &:after {
+            left: calc(50% - 44px);
+            width: 88px;
+
+            @media ($phone) {
+                left: 0;
+            }
+        }
+
+        span {
+            position: relative;
+        }
+    }
+
+    .feedback-carousel-wr {
+        position: relative;
+        width: 1020px;
+        margin: 70px auto 0;
+        padding: 0 60px;
+
+        &:after {
+            content: '';
+            position: absolute * * 100% 118px;
+            size: 66px 55px;
+            background: url('../i/quote.png') no-repeat;
+            background-size: contain;
+        }
+
+        @media ($small-desktop) {
+            width: 880px;
+        }
+
+        @media ($tablet) {
+            width: auto;
+            margin: 70px 40px 0;
+
+            &:after {
+                size: 44px 36px;
+            }
+        }
+
+        @media ($phone) {
+            margin: 20px 0 0;
+            padding: 0;
+
+            &:after {
+                display: none;
+            }
+        }
+
+        &:before {
+            content: '';
+            position: absolute -60px 0 * *;
+            size: 541px 437px;
+            background: url('../i/feedback-bg.png') no-repeat;
+            background-size: contain;
+
+            @media ($small-desktop) {
+                right: -20px;
+            }
+
+            @media ($phone) {
+                display: none;
+            }
+        }
+    }
+
+    .feedback-carousel {
+        padding: 70px 70px 55px;
+        background: white;
+        box-shadow: 0 11px 24px rgba(0, 0, 0, 0.08);
+
+        @media ($tablet) {
+            padding: 40px 40px 50px;
+        }
+
+        @media ($phone) {
+            padding: 20px 20px 30px;
+        }
+
+        .owl-nav div {
+            overflow: hidden;
+            size: 0;
+        }
+
+        .owl-dots {
+            position: absolute * 0 -70px 0;
+            text-align: center;
+
+            @media ($phone) {
+                bottom: -40px;
+            }
+
+            .owl-dot {
+                display: inline-block;
+                size: 6px;
+                margin: 0 3px;
+                border: 1px solid black;
+                border-radius: 50%;
+                transition: all .1s ease-in-out;
+
+                &:hover,
+                &.active {
+                    background: $main-color;
+                    border-color: $main-color;
+                }
+            }
+        }
+
+        &__nav {
+
+            .nav-prev {
+                cursor: pointer;
+                position: absolute calc(50% - 11px) * * 0;
+
+                svg {
+                    size: 22px;
+                    transition: color .1s ease-in-out;
+                }
+
+                &:hover {
+
+                    svg {
+                        color: $main-color;
+                    }
+                }
+            }
+            .nav-next {
+                cursor: pointer;
+                position: absolute calc(50% - 11px) 0 * *;
+
+                svg {
+                    size: 22px;
+                    transition: color .1s ease-in-out;
+                }
+
+                &:hover {
+
+                    svg {
+                        color: $main-color;
+                    }
+                }
+            }
+
+            @media ($phone) {
+                display: none;
+            }
+        }
+
+        &__item {
+
+            .feedback {
+                font-size: 18px;
+                line-height: 1.3;
+                color: #7d7b7b;
+
+                @media ($tablet) {
+                    font-size: 17px;
+                }
+
+                @media ($phone) {
+                    font-size: 14px;
+                }
+
+                &-author {
+                    margin-top: 30px;
+                    font-weight: 700;
+                    font-size: 24px;
+                    color: #000000;
+
+                    @media ($tablet) {
+                        font-size: 22px;
+                    }
+
+                    @media ($phone) {
+                        margin-top: 20px;
+                        font-size: 18px;
+                    }
+
+                    span {
+                        display: block;
+                        font-weight: 300;
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}

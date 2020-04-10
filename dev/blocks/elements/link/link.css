@@ -1,0 +1,59 @@
+/**/
+
+a {
+    color: inherit;
+}
+
+.link {
+    transition: color .1s ease-in-out;
+
+    &:hover {
+        color: $main-color;
+    }
+}
+
+.base-link {
+    display: inline-block;
+    font-weight: 300;
+    font-size: 24px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: $main-color;
+    transition: color .1s ease-in-out;
+
+    @media ($small-desktop) {
+        font-size: 20px;
+    }
+
+    @media ($tablet) {
+        font-size: 18px;
+    }
+
+    @media ($phone) {
+        font-size: 16px;
+    }
+
+    svg {
+        display: inline-block;
+        vertical-align: baseline;
+        margin-left: 10px;
+        size: 16px;
+
+        @media ($tablet) {
+            size: 12px;
+            margin-left: 4px;
+        }
+    }
+
+    &:hover {
+        color: black;
+    }
+
+    &.mod-color {
+        color: $main-color;
+
+        &:hover {
+            color: white;
+        }
+    }
+}

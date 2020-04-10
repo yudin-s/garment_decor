@@ -1,0 +1,226 @@
+.footer {
+
+    &__inner {
+        @extend .clearfix;
+
+        padding-bottom: 50px;
+        background: #191512;
+        background-image: radial-gradient(circle 299px at 51% 8%, rgba(127, 106, 102, 0.11) 0%, rgba(22, 19, 19, 0.11) 100%);
+
+        @media ($small-desktop) {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__copy {
+        line-height: 54px;
+        text-align: center;
+        color: white;
+        background: $main-color;
+
+        @media ($phone) {
+            font-size: 10px;
+            line-height: 36px;
+        }
+    }
+
+    &-counters {
+        @extend .clearfix;
+
+        float: left;
+        width: 100%;
+        padding: 62px 0;
+
+        @media ($small-desktop) {
+            padding: 40px 0 60px;
+        }
+
+        @media ($phone) {
+            float: none;
+            padding: 0;
+        }
+
+        &__item {
+            float: left;
+            width: calc(100% / 4);
+            text-align: center;
+
+            @media ($phone) {
+                float: none;
+                width: 100%;
+                margin: 30px 0;
+            }
+        }
+
+        .counter {
+
+            &-num {
+                font-weight: 700;
+                font-size: 24px;
+                color: $main-color;
+
+                @media ($tablet) {
+                    font-size: 20px;
+                }
+
+                @media ($phone) {
+                    font-size: 16px;
+                }
+            }
+            &-dscr {
+                margin-top: 3px;
+                font-size: 18px;
+                color: white;
+
+                @media ($tablet) {
+                    font-size: 16px;
+                }
+
+                @media ($phone) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &-nav {
+        @extend .clearfix;
+
+        float: left;
+        width: calc((100% - 316px) / 2);
+        color: #fff;
+
+        @media ($tablet) {
+            width: calc((100% - 220px) / 2);
+        }
+
+        @media ($phone) {
+            float: none;
+            width: 300px;
+            margin: 0 auto 30px;
+            padding-left: 30px;
+        }
+
+        li {
+            float: left;
+            display: block;
+            width: 50%;
+
+            .link {
+                display: inline-block;
+                margin-top: 8px;
+                font-weight: 700;
+                font-size: 18px;
+                text-transform: uppercase;
+
+                @media ($small-desktop) {
+                    font-size: 14px;
+                }
+
+                @media ($tablet) {
+                    font-size: 13px;
+                }
+
+                @media ($phone) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    &-contacts {
+        float: left;
+        width: calc((100% - 316px) / 2);
+        font-weight: 700;
+        font-size: 18px;
+        text-align: right;
+        color: white;
+
+        @media ($small-desktop) {
+            font-size: 16px;
+        }
+
+        @media ($tablet) {
+            width: calc((100% - 220px) / 2);
+            font-weight: 300;
+            font-size: 14px;
+        }
+
+        @media ($phone) {
+            float: none;
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .link {
+            color: white;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+
+        .cards {
+            margin-top: 22px;
+
+            @media ($small-desktop) {
+                margin-top: 14px;
+            }
+
+            img {
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &__logo {
+        margin-top: 15px;
+
+        img {
+            display: inline-block;
+        }
+    }
+
+    &-social {
+        float: left;
+        width: 316px;
+        text-align: center;
+
+        @media ($tablet) {
+            width: 220px;
+        }
+
+        @media ($phone) {
+            float: none;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .social-nav {
+            margin-top: 20px;
+
+            &__item {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 24px;
+                color: white;
+
+                @media ($phone) {
+                    margin: 0 16px;
+                }
+            }
+
+            .social-icon {
+                size: 15px;
+                color: white;
+                transition: color .1s ease-in-out;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}

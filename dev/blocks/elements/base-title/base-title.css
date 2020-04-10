@@ -1,0 +1,46 @@
+.base-title {
+    position: relative;
+    margin-bottom: 53px;
+    font-weight: 700;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    @media ($tablet) {
+        margin-bottom: 40px;
+        font-size: 28px;
+    }
+
+    @media ($phone) {
+        margin-bottom: 30px;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    &:before {
+        content: '';
+        position: absolute * * -1px -40px;
+        size: 302px 71px;
+        background: url('../i/title-bg.png') no-repeat;
+        background-size: contain;
+
+        @media ($phone) {
+            size: 200px 47px;
+        }
+    }
+
+    &:after {
+        content: '';
+        position: absolute * * -33px 0;
+        size: 65px 1px;
+        background: #f87601;
+        background: linear-gradient(to right, #f87601 0%, #fff 100%);
+
+        @media ($tablet) {
+            bottom: -15px;
+        }
+    }
+
+    p {
+        position: relative;
+    }
+}

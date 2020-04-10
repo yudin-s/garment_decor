@@ -1,0 +1,51 @@
+.pagination {
+    position: relative;
+    padding: 0 40px;
+
+    &-icon {
+        size: 13px;
+    }
+
+    &__list {
+        text-align: center;
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        margin: 15px 25px;
+        font-weight: 700;
+        font-size: 16px;
+
+        &.prev-link,
+        &.next-link {
+            position: absolute calc(50% - 6px) * * *;
+            margin: 0;
+        }
+
+        &.prev-link {
+            left: 0;
+        }
+        &.next-link {
+            right: 0;
+        }
+
+        &.is-active {
+            position: relative;
+
+            .link {
+                position: relative;
+                color: white;
+            }
+
+            &:before {
+                content: '';
+                position: absolute * * -11px -60px;
+                size: 140px 35px;
+                background: url('../i/title-bg.png') no-repeat;
+                background-size: cover;
+                transition: opacity .1s ease-in-out;
+            }
+        }
+    }
+}

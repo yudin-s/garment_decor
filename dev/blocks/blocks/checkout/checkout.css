@@ -1,0 +1,967 @@
+.checkout {
+    @extend .clearfix;
+
+    position: relative;
+    padding: 0 330px 60px 0;
+
+    @media ($small-desktop) {
+        padding-right: 320px;
+    }
+
+    @media (max-width: 980px) {
+        padding-right: 280px;
+    }
+
+    @media ($phone) {
+        padding: 0 0 40px;
+    }
+
+    &__container {
+        float: left;
+        width: 100%;
+
+        @media ($phone) {
+            float: none;
+            width: auto;
+            margin: 0 -10px;
+        }
+    }
+
+    &__sidebar {
+        float: right;
+        width: 300px;
+        margin-right: -330px;
+
+        @media ($small-desktop) {
+            margin-right: -320px;
+        }
+
+        @media (max-width: 980px) {
+            width: 260px;
+            margin-right: -280px;
+        }
+
+        @media ($phone) {
+            float: none;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    & > .base-link {
+        margin-bottom: 6px;
+        font-size: 28px;
+
+        @media (max-width: 980px) {
+            font-size: 24px;
+        }
+
+        @media ($phone) {
+            margin-top: 40px;
+            font-size: 20px;
+        }
+    }
+
+    .comment-text {
+        font-size: 12px;
+    }
+
+    &-card {
+        position: relative;
+        margin-bottom: 40px;
+        padding: 30px;
+        background: white;
+
+        @media (max-width: 980px) {
+            padding: 30px 20px;
+        }
+
+        @media ($phone) {
+            margin-bottom: 20px;
+        }
+
+        .base-title {
+            text-transform: none;
+
+            @media ($tablet) {
+                font-size: 22px;
+            }
+
+            @media ($phone) {
+                font-size: 18px;
+            }
+
+            &:before {
+                bottom: -23px;
+                left: -10px;
+
+                @media ($tablet) {
+                    size: 252px 60px;
+                    bottom: -19px;
+                }
+
+                @media ($phone) {
+                    size: 210px 50px;
+                    bottom: -15px;
+                }
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+
+        .login-link {
+            position: absolute 43px 30px * *;
+
+            @media ($tablet) {
+                top: 36px;
+            }
+
+            @media (max-width: 980px) {
+                color: transparent;
+            }
+
+            @media ($phone) {
+                right: 20px;
+                font-size: 12px;
+            }
+
+            .link {
+                display: inline-block;
+                margin-left: 10px;
+                color: $main-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .cart-block {
+
+        &__item {
+            @extend .clearfix;
+
+            position: relative;
+            margin-top: 20px;
+
+            .remove-icon {
+                cursor: pointer;
+                position: absolute 0 0 * *;
+
+                .icon {
+                    size: 20px;
+
+                    @media ($phone) {
+                        size: 16px;
+                    }
+                }
+            }
+
+            .item {
+                @extend .clearfix;
+
+                &-photo {
+                    position: relative;
+                    float: left;
+                    size: 160px;
+                    margin-right: 40px;
+                    background: #fafafa;
+
+                    @media ($small-desktop) {
+                        size: 140px;
+                        margin-right: 20px;
+                    }
+
+                    @media (max-width: 980px) {
+                        size: 100px;
+                    }
+
+                    @media ($phone) {
+                        display: none;
+                    }
+
+                    img {
+                        position: absolute 50% * * 50%;
+                        max-width: 80%;
+                        max-height: 80%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                &-dscr {
+                    float: left;
+                    width: calc(100% - 200px);
+                    padding-right: 40px;
+
+                    @media ($small-desktop) {
+                        width: calc(100% - 160px);
+                    }
+
+                    @media (max-width: 980px) {
+                        width: calc(100% - 120px);
+                    }
+
+                    @media ($phone) {
+                        float: none;
+                        width: 100%;
+                    }
+
+                    p {
+                        font-weight: 700;
+                        font-size: 18px;
+
+                        @media (max-width: 980px) {
+                            font-size: 16px;
+                        }
+
+                        @media ($phone) {
+                            font-size: 14px;
+                        }
+
+                        &:last-child {
+                            margin-top: 10px;
+                            font-weight: 300;
+                            font-size: 16px;
+
+                            @media ($small-desktop) {
+                                font-size: 14px;
+                            }
+
+                            @media ($phone) {
+                                font-size: 12px;
+                            }
+
+                            img {
+                                position: relative;
+                                top: 2px;
+                                display: inline-block;
+                                vertical-align: top;
+                                size: 16px;
+                                margin-bottom: 6px;
+                                border: 1px solid #e6e6e6;
+                                border-radius: 50%;
+
+                                @media ($phone) {
+                                    top: 0;
+                                    size: 12px;
+                                }
+                            }
+
+                            span {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                &-info {
+                    float: left;
+                    width: calc(100% - 200px);
+                    margin-top: 12px;
+
+                    @media ($small-desktop) {
+                        width: calc(100% - 160px);
+                    }
+
+                    @media (max-width: 980px) {
+                        clear: both;
+                        width: 100%;
+                    }
+
+                    thead {
+
+                        th {
+                            width: calc(120 * 100 / 590)%;
+                            text-align: left;
+                            font-weight: 300;
+                            color: #7b7b7b;
+
+                            @media ($small-desktop) {
+                                width: 20%;
+                            }
+
+                            @media ($phone) {
+                                width: auto;
+                                font-size: 12px;
+                            }
+
+                            &:nth-child(1) {
+                                @media ($small-desktop) {
+                                    width: 10%;
+                                }
+
+                                @media ($phone) {
+                                    width: auto;
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                text-align: center;
+
+                                @media ($small-desktop) {
+                                    width: 35%;
+                                }
+
+                                @media ($phone) {
+                                    width: auto;
+                                }
+                            }
+
+                            &:nth-child(4) {
+                                width: calc(230 * 100 / 590)%;
+                                padding-left: 15%;
+
+                                @media ($small-desktop) {
+                                    width: 35%;
+                                    padding-left: 10%;
+                                }
+
+                                @media ($phone) {
+                                    width: auto;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    tbody {
+
+                        tr {
+                            margin-top: 5px;
+                        }
+
+                        td {
+                            vertical-align: middle;
+                            padding-top: 3px;
+
+                            @media ($phone) {
+                                font-size: 12px;
+                            }
+
+                            &:nth-child(3) {
+                                text-align: center;
+                            }
+
+                            &:nth-child(4) {
+                                padding-left: 15%;
+
+                                @media ($small-desktop) {
+                                    padding-left: 10%;
+                                }
+
+                                @media ($phone) {
+                                    padding-left: 0;
+                                }
+                            }
+
+                            b {
+                                font-size: 16px;
+
+                                @media ($phone) {
+                                    font-size: 12px;
+                                }
+                            }
+
+                            small {
+                                font-size: 12px;
+                                color: #7b7b7b;
+
+                                @media ($phone) {
+                                    font-size: 10px;
+                                }
+                            }
+
+                            .counter {
+                                display: inline-block;
+
+                                input {
+
+                                    @media ($phone) {
+                                        width: 42px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .group-select {
+
+        ul {
+
+            li {
+                @extend .clearfix;
+
+                margin-top: 60px;
+
+                @media (max-width: 980px) {
+                    margin-top: 40px;
+                }
+
+                @media ($phone) {
+                    margin-top: 20px;
+                }
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &.shipping_other_address {
+                    margin-top: 35px;
+                }
+
+                .two-fields {
+                    position: relative;
+                    float: left;
+                    width: calc((100% - 100px) / 2);
+
+                    @media ($small-desktop) {
+                        width: calc((100% - 60px) / 2);
+                    }
+
+                    @media (max-width: 980px) {
+                        width: calc((100% - 30px) / 2);
+                    }
+
+                    @media ($phone) {
+                        float: none;
+                        width: 100%;
+                    }
+
+                    &.last {
+                        float: right;
+
+                        @media ($phone) {
+                            float: none;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+
+                .three-fields {
+                    position: relative;
+                    float: left;
+                    width: calc((100% - 100px) / 2);
+
+                    @media ($small-desktop) {
+                        width: calc((100% - 60px) / 2);
+                    }
+
+                    @media (max-width: 980px) {
+                        width: calc((100% - 30px) / 2);
+                    }
+
+                    @media ($phone) {
+                        float: none;
+                        width: 100%;
+                    }
+
+                    &.middle {
+                        width: calc((50% - 90px) / 1.5);
+                        margin-left: 100px;
+
+                        @media ($small-desktop) {
+                            margin-left: 60px;
+                        }
+
+                        @media (max-width: 980px) {
+                            width: calc((100% - 30px) / 3.5);
+                            margin-left: 30px;
+                        }
+
+                        @media ($phone) {
+                            float: left;
+                            width: calc((100% - 20px) / 2);
+                            margin-top: 20px;
+                            margin-left: 0;
+                        }
+                    }
+
+                    &.last {
+                        float: right;
+                        width: calc((50% - 90px) / 3);
+
+                        @media ($small-desktop) {
+                            width: calc((50% - 90px) / 2.3);
+                        }
+
+                        @media ($tablet) {
+                            width: calc((50% - 90px) / 2);
+                        }
+
+                        @media ($phone) {
+                            float: left;
+                            width: calc((100% - 20px) / 2);
+                            margin-top: 20px;
+                            margin-left: 20px;
+                        }
+                    }
+                }
+
+                label {
+                    position: absolute 0 * * 0;
+                    display: block;
+                    width: 100%;
+                    color: #7d7b7b;
+                    white-space: nowrap;
+
+                    @media (max-width: 980px) {
+                        font-size: 12px;
+                    }
+
+                    em {
+                        font-size: 18px;
+                        color: #ff7900;
+
+                        @media (max-width: 980px) {
+                            position: relative;
+                            left: -4px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .validation-advice {
+                    position: absolute * * -20px 0;
+                    font-size: 12px;
+                    color: red;
+                }
+
+                .input-text,
+                .validate-select {
+                    width: 100% !important;
+                    height: 27px;
+                    margin-top: 22px;
+                    padding: 0 4px;
+                    font: 300 14px/26px $nexa;
+                    background: none;
+                    border: 0 none;
+                    border-bottom: 1px solid #000;
+
+                    @media ($phone) {
+                        margin-top: 18px;
+                    }
+                }
+
+                .input-text {
+                    transition: border .1s ease-in-out;
+                }
+
+                .input-text:focus {
+                    border-color: $main-color;
+                }
+
+                .validate-select {
+                    padding: 0;
+                }
+
+                .checkbox-group {
+
+                    input[type="checkbox"] {
+                        display: none;
+
+                        & + label {
+                            position: relative auto;
+                            padding-left: 31px;
+
+                            &:before {
+                                content: '';
+                                cursor: pointer;
+                                position: absolute calc(50% - 9px) * * 0;
+                                size: 16px;
+                                font-size: 10px;
+                                line-height: 14px;
+                                color: white;
+                                text-align: center;
+                                border: 1px solid #e8e8e8;
+                                border-radius: 2px;
+                            }
+                        }
+
+                        &:checked + label {
+
+                            &:before {
+                                content: '\2714';
+                                background: $main-color;
+                                border-color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .onestepcheckout-payment-methods,
+    .onestepcheckout-shipping-method-section {
+
+        .radioparent {
+            margin-top: 60px;
+
+            @media ($phone) {
+                margin-top: 40px;
+            }
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+            input[type="radio"] {
+                display: none;
+
+                & + .outer {
+                    cursor: pointer;
+                    position: relative;
+                    display: inline-block;
+                    vertical-align: top;
+                    size: 18px;
+                    margin-right: 20px;
+                    text-align: center;
+                    border: 1px solid $main-color;
+                    border-radius: 50%;
+
+                    @media ($phone) {
+                        margin-right: 10px;
+                    }
+                }
+
+                &:checked + .outer {
+
+                    .inner {
+                        position: absolute 4px * * 4px;
+                        display: block;
+                        z-index: 1;
+                        size: 8px;
+                        background: $main-color;
+                        border-radius: 50%;
+                    }
+                }
+            }
+
+            label {
+                font-size: 18px;
+
+                @media ($tablet) {
+                    font-size: 16px;
+                }
+
+                @media ($phone) {
+                    font-size: 14px;
+                }
+            }
+
+            .price {
+                display: block;
+                margin-top: 10px;
+                margin-left: 38px;
+
+                @media ($tablet) {
+                    margin-top: 6px;
+                }
+
+                @media ($phone) {
+                    margin-left: 28px;
+                }
+            }
+            .comment {
+                position: relative;
+                display: block;
+                margin-top: 15px;
+                margin-left: 38px;
+                font-size: 14px;
+
+                @media ($tablet) {
+                    margin-top: 10px;
+                }
+
+                @media ($phone) {
+                    margin-left: 28px;
+                    font-size: 12px;
+                }
+
+                .info {
+                    position: static;
+                    display: inline-block;
+                    vertical-align: top;
+                    size: auto;
+                    margin-left: 0;
+                    text-align: left;
+                    border: 0 none;
+                    border-radius: 0;
+
+                    i {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 14px;
+                        text-decoration: underline;
+                        color: $main-color;
+                    }
+
+                    &-text {
+                        max-width: 100%;
+                    }
+
+                    .delivery_time_date {
+
+                        label {
+                            display: block;
+                            margin-bottom: 10px;
+                            font-size: 14px;
+                        }
+
+                        .datetime-delivery {
+                            display: inline-block;
+
+                            input {
+                                font-size: 16px;
+                                line-height: 21px;
+                            }
+
+                            img {
+                                display: inline;
+                                vertical-align: top;
+                                width: auto;
+                            }
+                        }
+
+                        .mdl-selectfield {
+                            float: right;
+
+                            select {
+                                height: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .form-list {
+            @extend .clearfix;
+
+            li {
+                position: relative;
+                display: block;
+                float: left;
+                width: calc((100% - 100px) / 2);
+                margin-top: 60px;
+                margin-left: 100px;
+
+                @media ($small-desktop) {
+                    width: calc((100% - 60px) / 2);
+                    margin-left: 60px;
+                }
+
+                @media (max-width: 980px) {
+                    width: calc((100% - 30px) / 2);
+                    margin-left: 30px;
+                }
+
+                @media ($phone) {
+                    width: 100%;
+                    margin-top: 20px;
+                    margin-left: 0;
+                }
+
+                &:nth-child(2n + 1) {
+                    margin-left: 0;
+                }
+
+                label {
+                    position: absolute 0 * * 0;
+                    display: block;
+                    width: 100%;
+                    color: #7d7b7b;
+
+                    @media (max-width: 980px) {
+                        font-size: 12px;
+                    }
+
+                    em {
+                        font-size: 18px;
+                        color: #ff7900;
+
+                        @media (max-width: 980px) {
+                            position: relative;
+                            left: -2px;
+                            font-size: 16px;
+                        }
+                    }
+                }
+
+                .info {
+                    position: absolute 4px * * 30px;
+
+                    &-text {
+
+                        @media ($phone) {
+                            left: -57px;
+                            max-width: 300px;
+                        }
+                    }
+                }
+            }
+
+            .input-box {
+                @extend .clearfix;
+
+                .v-fix {
+                    float: left;
+                    width: calc((100% - 40px) / 2);
+                    margin-left: 40px;
+
+                    @media (max-width: 980px) {
+                        width: calc((100% - 30px) / 2);
+                        margin-left: 30px;
+                    }
+
+                    @media ($phone) {
+                        width: calc((100% - 20px) / 2);
+                        margin-left: 20px;
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+
+                .input-text,
+                select {
+                    width: 100% !important;
+                    height: 27px;
+                    margin-top: 22px;
+                    padding: 0 4px;
+                    font: 300 14px/26px $nexa;
+                    background: none;
+                    border: 0 none;
+                    border-bottom: 1px solid #000;
+                }
+                .input-text {
+                    transition: border .1s ease-in-out;
+                }
+                .input-text:focus {
+                    border-color: $main-color;
+                }
+
+                .validation-advice {
+                    position: absolute * * -20px 0;
+                    font-size: 12px;
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .onestepcheckout-shipping-method-section {
+        .radioparent {
+            margin-top: 30px;
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+            img {
+                float: right;
+
+                @media ($phone) {
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .summary-block {
+        padding: 35px 30px;
+        color: white;
+        background: $main-color;
+
+        @media (max-width: 980px) {
+            padding: 25px 20px;
+        }
+
+        @media ($phone) {
+            padding: 20px;
+        }
+
+        &__item {
+            @extend .clearfix;
+
+            margin-bottom: 15px;
+
+            @media ($phone) {
+                margin-bottom: 10px;
+                font-size: 12px;
+            }
+
+            span {
+                float: left;
+                display: block;
+                width: 50%;
+
+                & + span {
+                    text-align: right;
+                }
+            }
+
+            &.mod-del {
+                margin: 25px 0 3px;
+
+                @media ($phone) {
+                    margin: 20px 0 0;
+                }
+            }
+
+            &.mod-total {
+                margin-bottom: 0;
+                font-size: 18px;
+
+                @media ($phone) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .comment {
+            font-size: 12px;
+
+            @media ($phone) {
+                font-size: 10px;
+            }
+        }
+
+        hr {
+            margin: 25px 0;
+            border-color: white;
+        }
+
+        .base-title {
+            margin-bottom: 30px;
+            font-size: 18px;
+
+            @media ($phone) {
+                margin-bottom: 24px;
+                font-size: 16px;
+            }
+
+            &:before {
+                size: 202px 47px;
+                bottom: -15px;
+                left: -14px;
+                background-image: url('../i/title-bg-1.png');
+
+                @media ($phone) {
+                    size: 156px 37px;
+                    bottom: -10px;
+                    left: -19px;
+                }
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}

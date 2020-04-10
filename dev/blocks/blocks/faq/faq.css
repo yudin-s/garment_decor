@@ -1,0 +1,118 @@
+.faq {
+    margin-bottom: 60px;
+
+    @media ($phone) {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+
+        @media ($phone) {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    }
+
+    &-item {
+
+        &__content {
+            padding-bottom: 40px;
+
+            @media ($phone) {
+                padding-bottom: 20px;
+            }
+        }
+
+        &__title {
+            position: relative;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 24px;
+
+            @media ($tablet) {
+                font-size: 20px;
+            }
+
+            @media ($phone) {
+                font-size: 16px;
+            }
+
+            &:before {
+                content: '';
+                position: absolute * * 1px -15px;
+                size: 160px 38px;
+                background: url('../i/title-bg.png') no-repeat;
+                background-size: contain;
+
+                @media ($phone) {
+                    display: none;
+                }
+            }
+
+            .faq-icon {
+                cursor: pointer;
+                position: relative;
+                z-index: 10;
+                display: inline-block;
+                vertical-align: middle;
+                size: 42px;
+                margin: 0 85px 0 35px;
+                border: 3px solid black;
+                border-radius: 50%;
+
+                @media ($phone) {
+                    position: absolute calc(50% - 15px) 10px * *;
+                    size: 30px;
+                    margin: 0;
+                    border-width: 2px;
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute calc(50% - 1.5px) * * calc(50% - 11px);
+                    size: 22px 3px;
+                    background: black;
+
+                    @media ($phone) {
+                        position: absolute calc(50% - 1px) * * calc(50% - 7px);
+                        size: 14px 2px;
+                    }
+                }
+                &:after {
+                    content: '';
+                    position: absolute calc(50% - 11px) * * calc(50% - 1.5px);
+                    size: 3px 22px;
+                    background: black;
+
+                    @media ($phone) {
+                        position: absolute calc(50% - 7px) * * calc(50% - 1px);
+                        size: 2px 14px;
+                    }
+                }
+            }
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+
+                @media ($phone) {
+                    padding-right: 45px;
+                }
+            }
+
+            &.is-open {
+
+                .faq-icon {
+
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

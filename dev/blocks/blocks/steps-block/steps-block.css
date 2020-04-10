@@ -1,0 +1,77 @@
+.steps-block {
+    @extend .clearfix;
+
+    margin: 95px 0 0;
+
+    @media ($phone) {
+        margin: 20px 0 0;
+    }
+
+    &__title {
+        float: left;
+        width: 100%;
+        margin-bottom: 40px;
+        font-weight: 700;
+        font-size: 24px;
+        text-transform: uppercase;
+
+        @media ($phone) {
+            font-size: 16px;
+        }
+    }
+
+    &__item {
+        float: left;
+        width: calc((100% - 100px) / 2);
+        margin-bottom: 65px;
+        margin-left: 100px;
+
+        @media ($tablet) {
+            width: calc((100% - 60px) / 2);
+            margin-bottom: 20px;
+            margin-left: 60px;
+        }
+
+        @media ($phone) {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        &:nth-child(2n + 2) {
+            clear: both;
+            margin-left: 0;
+        }
+
+        img {
+            margin-bottom: 25px;
+
+            @media ($tablet) {
+                width: 200px;
+            }
+
+            @media ($phone) {
+                width: 180px;
+                margin-bottom: 15px;
+            }
+        }
+
+        p {
+            line-height: 1.5;
+
+            @media ($phone) {
+                font-size: 12px;
+            }
+        }
+
+        &.mod-img {
+
+            img {
+                margin-bottom: 0;
+
+                @media ($phone) {
+                    display: none;
+                }
+            }
+        }
+    }
+}

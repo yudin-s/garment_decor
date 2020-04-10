@@ -1,0 +1,138 @@
+.popup-wr {
+    display: none;
+    overflow: auto;
+    position: fixed 0;
+    z-index: 100;
+    background: rgba(0, 0, 0, .2);
+
+    @media ($phone) {
+        position: absolute 0 0 auto 0;
+        padding-bottom: 30px;
+        background: none;
+    }
+
+    &.is-visible {
+        display: block;
+    }
+
+    .popup {
+        position: relative;
+        width: 680px;
+        margin: 170px auto;
+        padding: 40px 80px;
+        background: white;
+
+        @media ($phone) {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            box-shadow: 0px 11px 24px 0px rgba(0, 0, 0, 0.08);
+        }
+
+        &__title {
+            display: none;
+
+            @media ($phone) {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 700;
+                line-height: 50px;
+                text-transform: uppercase;
+                text-align: center;
+                background: white;
+                border-bottom: 1px solid #e6e6e6;
+
+                i {
+                    position: absolute 0 * * 0;
+                    size: 50px;
+                    font-style: normal;
+                    font-size: 20px;
+                    line-height: 51px;
+                }
+            }
+        }
+
+        &-close {
+            cursor: pointer;
+            position: absolute 20px 20px * *;
+
+            .icon {
+                size: 30px;
+            }
+
+            @media ($phone) {
+                display: none;
+            }
+        }
+
+        .signin-block {
+            padding-bottom: 20px;
+
+            @media ($phone) {
+                padding: 20px;
+                background: white;
+            }
+
+            .base-title {
+                margin-bottom: 40px;
+
+                &:before {
+                    size: 254px 60px;
+                    bottom: -14px;
+                    left: -21px;
+                }
+
+                &:after {
+                    display: none;
+                }
+
+                @media ($phone) {
+                    display: none;
+                }
+            }
+
+            .field {
+                margin: 55px 0;
+
+                @media ($phone) {
+                    margin: 30px 0;
+                }
+
+                label {
+                    display: block;
+                    margin-bottom: 5px;
+
+                    @media ($phone) {
+                        font-size: 12px;
+                    }
+
+                    sup {
+                        font-size: 18px;
+                        color: $main-color;
+                    }
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    padding: 0 2px;
+                    line-height: 26px;
+                    background: none;
+                    border-width: 0 0 1px;
+                    border-color: black;
+                    border-radius: 0;
+                    transition: border .1s ease-in-out;
+
+                    @media ($phone) {
+                        font-size: 13px;
+                    }
+
+                    &:focus {
+                        border-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+}

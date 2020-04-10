@@ -1,0 +1,13 @@
+.team-bnnr {
+    margin: 90px 0 0;
+    text-align: center;
+
+    @media ($small-phone) {
+        margin-top: 40px;
+    }
+
+    & img {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
