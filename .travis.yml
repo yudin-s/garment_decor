@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "8"
+  - "10"
 cache:
   directories:
     - "node_modules"
@@ -9,10 +9,9 @@ branches:
   - master
 install:
   - npm install
-before_script:
   - npm install -g gulp-cli
 script:
-  - gulp template
+  - gulp templates
   - echo "Skipping tests"
 deploy:
   provider: pages
